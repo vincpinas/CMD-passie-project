@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re:note</title>
+    <script type="module" src="src/startpage.ts"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <section class="loading hidden">
+        <span class="loading__bar">
+            <span class="loading__progress"></span>
+        </span>
+    </section>
+    <div id="greeting">
+        <p></p>
+        <button class="-bspecial"><b>Click to start</b></button>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li class="-mleft">
+                <div class="lang__container ">
+                    <button class="lang -bspecial"></button>
+                    <section class="lang__modal">
+                        <button data-lang="en">English (US)</button>
+                        <hr>
+                        <button data-lang="nl">Nederlands</button>
+                    </section>
+                </div>
+            </li>
+            <li>
+                <div class="settings__container">
+                    <button class="settings -bspecial"><ion-icon name="settings-outline"></ion-icon></button>
+                    <section class="settings__modal">
+                        <h4>Settings</h4>
+                        <ul>
+                            <li>
+                                <p>Scroll-snap</p>
+                                <label class="switch">
+                                    <input data-function="snap" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Theme</p>
+                                <label class="switch">
+                                    <input data-function="theme" type="checkbox">
+                                    <span class="slider">
+                                        <span class="crater crater-1"></span>
+                                        <span class="crater crater-2"></span>
+                                        <span class="crater crater-3"></span>
+                                        <span class="crater crater-4"></span>
+                                        <span class="crater crater-5"></span>
+                                        <span class="crater crater-6"></span>
+                                    </span>
+                                    <span class="cloud cloud-1"></span>
+                                    <span class="cloud cloud-2"></span>
+                                    <span class="cloud cloud-3"></span>
+                                    <span class="star star-1"></span>
+                                    <span class="star star-2"></span>
+                                    <span class="star star-3"></span>
+                                    <span class="star star-4"></span>
+                                    <span class="star star-5"></span>
+                                    <span class="star star-6"></span>
+                                </label>
+                            </li>
+                            <hr>
+                        </ul>
+                    </section>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div id="canvas-container">
+        <span>
+            <ion-icon name="move-outline"></ion-icon>
+            <p>Click and drag your mouse to <br> rotate the camera</p>
+        </span>
+        <canvas id="midicanvas"></canvas>
+    </div>
+</body>
+
+</html>

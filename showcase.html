@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="/src/main.ts"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <title>Re:note • Showcase</title>
+</head>
+
+<body>
+  <section class="loading">
+    <span class="loading__bar">
+      <span class="loading__progress"></span>
+    </span>
+  </section>
+  <nav class="menu">
+    <ul>
+      <li>
+        <button class="-bspecial" id="back">Go back</button>
+      </li>
+      <li class="-mleft"> 
+        <div class="lang__container ">
+          <button class="lang -bspecial"></button>
+          <section class="lang__modal">
+            <button data-lang="en">English (US)</button>
+            <hr>
+            <button data-lang="nl">Nederlands</button>
+          </section>
+        </div>
+      </li>
+      <li>
+        <div class="settings__container">
+          <button class="settings -bspecial"><ion-icon name="settings-outline"></ion-icon></button>
+          <section class="settings__modal">
+            <h4>Settings</h4>
+            <ul>
+              <li>
+                <p>Scroll-snap</p>
+                <label class="switch">
+                  <input data-function="snap" type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </li>
+              <hr>
+              <li>
+                <p>Theme</p>
+                <label class="switch">
+                  <input data-function="theme" type="checkbox">
+                  <span class="slider">
+                    <span class="crater crater-1"></span>
+                    <span class="crater crater-2"></span>
+                    <span class="crater crater-3"></span>
+                    <span class="crater crater-4"></span>
+                    <span class="crater crater-5"></span>
+                    <span class="crater crater-6"></span>
+                  </span>
+                  <span class="cloud cloud-1"></span>
+                  <span class="cloud cloud-2"></span>
+                  <span class="cloud cloud-3"></span>
+                  <span class="star star-1"></span>
+                  <span class="star star-2"></span>
+                  <span class="star star-3"></span>
+                  <span class="star star-4"></span>
+                  <span class="star star-5"></span>
+                  <span class="star star-6"></span>
+                </label>
+              </li>
+              <hr>
+            </ul>
+          </section>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div id="canvas-container">
+    <span>
+      <ion-icon name="move-outline"></ion-icon>
+      <p>Click and drag your mouse to <br> rotate the camera</p>
+    </span>
+    <canvas id="midicanvas"></canvas>
+  </div>
+  <article id="content">
+    <div class="content__div first">
+      <h2></h2>
+      <sub></sub>
+      <p></p>
+      <span id="scroll-indication">
+      </span>
+    </div>
+    <div class="content__div second">
+      <h2></h2>
+      <p>
+      </p>
+    </div>
+    <div class="content__div third">
+      <h2></h2>
+      <p></p>
+    </div>
+    <div class="content__div fourth">
+      <h2></h2>
+      <p></p>
+    </div>
+    <div class="content__div fifth">
+      <h2></h2>
+      <p>€<span>0</span>,-</p>
+      <form>
+        <span class="form__row">
+          <label for="materials">
+            <span class="text">Materials</span>
+            <select name="materials" id="materials">
+              <option value="" disabled selected>Please select material</option>
+              <option value="plastic">Recycled plastic</option>
+              <option value="wood">Recycled wood</option>
+            </select>
+          </label>
+        </span>
+        <label class="checkbox" for="pedal">
+          <span class="text">Sustain pedal +</span>
+          <input type="checkbox" id="pedal" name="pedal">
+          <span class="checkmark"></span>
+        </label>
+        <button type="submit" class="-bspecial"></button>
+      </form>
+    </div>
+  </article>
+</body>
+
+</html>
