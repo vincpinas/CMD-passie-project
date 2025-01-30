@@ -1,4 +1,4 @@
-@import "./Variables";
+@import "./variables";
 
 @mixin font--primary($weight: 300, $style: normal) {
     font-family: $font--primary;
